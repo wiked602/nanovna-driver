@@ -1,0 +1,43 @@
+# Configuration for LiteVNA mock server
+# This file allows customization of the mock device behavior
+
+# Firmware version (major, minor)
+firmware_major: 2
+firmware_minor: 2
+
+# Hardware revision (byte)
+hardware_revision: 2
+
+# Battery voltage in millivolts (0-65535)
+battery_voltage_mv: 3700
+
+# Default sweep parameters (used on startup)
+sweep_start_hz: 1000000
+sweep_step_hz: 1000000
+sweep_points: 101
+
+# Valid datapoint counts (must match device limitations)
+valid_datapoints: [51, 101, 201, 401, 801, 1024, 1601, 3201, 4501, 6401, 12801, 25601]
+
+# Maximum frequency in Hz
+max_frequency_hz: 6300000000
+
+# Screen dimensions (for screenshot generation)
+screen_width: 480
+screen_height: 320
+screen_depth: 16  # RGB565
+
+# Data generation parameters (for FIFO)
+fifo:
+  # Base amplitude for forward signal
+  fwd_base: 1000
+  fwd_amplitude: 500
+  refl_amplitude: 200
+  thru_amplitude: 300
+  # Frequency variation
+  fwd_freq: 0.1
+  refl_freq: 0.2
+  thru_freq: 0.142857
+
+# Logging level (DEBUG, INFO, WARNING, ERROR)
+logging_level: INFO
