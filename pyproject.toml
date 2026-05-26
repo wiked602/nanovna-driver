@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nanovna-driver-py"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "pymeasure>=0.15.0",
+    "pyserial>=3.5",
+    "pytest>=9.0.2",
+    "pyvisa-py>=0.8.1",
+    "pyyaml>=6.0.3",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
